@@ -2,6 +2,8 @@
 
 A modern, professional website for Velon LLC built with Next.js 14, React, TypeScript, and Tailwind CSS.
 
+Live at: https://velonllc.com
+
 ## Features
 
 - Modern, responsive design
