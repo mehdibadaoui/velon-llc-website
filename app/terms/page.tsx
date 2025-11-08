@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Terms of Service - Velon LLC',
@@ -88,43 +89,94 @@ export default function Terms() {
 
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">5. Payment Terms</h2>
-            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.1 Pricing</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.1 Pricing and Currency</h3>
             <p className="text-gray-700 mb-4">
-              We offer flexible pricing models including:
+              All prices are displayed in United States Dollars (USD) unless otherwise specified. We offer flexible pricing models including:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
               <li><strong>One-Time Projects:</strong> Fixed or milestone-based pricing for specific projects</li>
               <li><strong>Subscription Plans:</strong> Recurring monthly fees for ongoing development and support</li>
               <li><strong>Hourly Rates:</strong> Time-based billing for consulting or variable-scope work</li>
             </ul>
+            <p className="text-gray-700 mb-4">
+              Final pricing will be clearly outlined in your project proposal or agreement before work begins. All quoted prices exclude applicable taxes unless otherwise stated.
+            </p>
 
-            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.2 Payment Schedule</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.2 Payment Processing</h3>
+            <p className="text-gray-700 mb-4">
+              We use Stripe as our payment processor. By making a payment, you agree to:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+              <li>Provide accurate and complete payment information</li>
+              <li>Authorize us to charge your payment method for all agreed-upon fees</li>
+              <li>Promptly update your payment information if it changes</li>
+              <li>Be responsible for any fees associated with your payment method</li>
+            </ul>
+            <p className="text-gray-700 mb-4">
+              <strong>Accepted Payment Methods:</strong> We accept major credit cards (Visa, Mastercard, American Express, Discover), debit cards, and ACH transfers through Stripe. All payment information is processed securely by Stripe and is never stored on our servers.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <strong>PCI Compliance:</strong> Our payment processing is PCI-DSS compliant through our partnership with Stripe, ensuring the highest level of payment security.
+            </p>
+
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.3 Payment Schedule</h3>
             <p className="text-gray-700 mb-4">
               Unless otherwise specified in your project agreement:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-              <li>A deposit may be required before work begins</li>
-              <li>Milestone payments are due upon completion of specified deliverables</li>
-              <li>Final payment is due before project delivery</li>
-              <li>Subscription fees are billed monthly in advance</li>
-              <li>Invoices are due within 14 days of receipt unless otherwise agreed</li>
+              <li><strong>Initial Deposit:</strong> A 30-50% deposit may be required before work begins</li>
+              <li><strong>Milestone Payments:</strong> Payments are due upon completion of specified deliverables</li>
+              <li><strong>Final Payment:</strong> Due before final project delivery and handover</li>
+              <li><strong>Subscription Billing:</strong> Recurring fees are automatically charged monthly in advance on your billing date</li>
+              <li><strong>Invoice Payment:</strong> Invoices are due within 14 days of receipt unless otherwise agreed</li>
             </ul>
 
-            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.3 Late Payments</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.4 Late Payments and Failed Charges</h3>
             <p className="text-gray-700 mb-4">
-              Late payments may result in:
+              Late or failed payments may result in:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-              <li>Suspension of work until payment is received</li>
-              <li>Late fees of 1.5% per month on overdue balances</li>
+              <li>Immediate suspension of work until payment is received</li>
+              <li>Late fees of 1.5% per month (18% annually) on overdue balances where permitted by law</li>
+              <li>Service interruption for subscription accounts with failed payments</li>
               <li>Termination of service for accounts 30+ days overdue</li>
+              <li>Reporting to credit bureaus and collection agencies for severely delinquent accounts</li>
+            </ul>
+            <p className="text-gray-700 mb-4">
+              For subscription services, we will attempt to charge your payment method up to three times. If all attempts fail, your account will be suspended.
+            </p>
+
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.5 Refunds and Cancellations</h3>
+            <p className="text-gray-700 mb-4">
+              Please refer to our <Link href="/refund-policy" className="text-primary-600 hover:text-primary-700 underline">Refund Policy</Link> for complete details. Generally:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+              <li>Payments for completed work or delivered milestones are non-refundable</li>
+              <li>Subscription services may be cancelled at any time without penalty</li>
+              <li>Refunds are processed to the original payment method within 7-10 business days</li>
+              <li>Deposits may be partially refundable if no work has commenced</li>
             </ul>
 
-            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.4 Refunds</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.6 Taxes</h3>
             <p className="text-gray-700 mb-4">
-              Refunds are handled on a case-by-case basis. Generally, payments for completed work or
-              delivered milestones are non-refundable. Deposits may be partially refundable if no work
-              has commenced.
+              You are responsible for all applicable taxes, duties, and government fees (collectively "Taxes") associated with your purchase, except for taxes based on our net income. If we are required to collect or pay Taxes, they will be added to your invoice.
+            </p>
+
+            <h3 className="text-2xl font-semibold mb-3 text-gray-900">5.7 Disputes and Chargebacks</h3>
+            <p className="text-gray-700 mb-4">
+              <strong>Important:</strong> If you have any billing concerns or disputes, please contact us immediately at support@velonllc.com before initiating a chargeback with your payment provider.
+            </p>
+            <p className="text-gray-700 mb-4">
+              Initiating a chargeback without first attempting to resolve the issue with us may result in:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+              <li>Immediate suspension or termination of all services</li>
+              <li>Forfeiture of access to deliverables and work product</li>
+              <li>Legal action to recover the disputed amount plus associated costs</li>
+              <li>Reporting of fraudulent chargeback activity to appropriate authorities</li>
+            </ul>
+            <p className="text-gray-700 mb-4">
+              We are committed to resolving all payment disputes fairly and promptly through direct communication.
             </p>
           </section>
 
